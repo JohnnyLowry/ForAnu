@@ -50,6 +50,23 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+    /* --- Spinner styles --- */
+    .wip-section {
+      margin-top: 40px;
+    }
+    .spinner {
+      margin: 20px auto;
+      border: 6px solid #f3f3f3;   /* Light grey */
+      border-top: 6px solid #333;  /* Dark top for spin effect */
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
@@ -64,5 +81,12 @@
     <img src="photos/photo3.png" alt="Photo 3">
     <img src="photos/photo4.png" alt="Photo 4">
   </div>
+
+  <!-- Work in progress section -->
+  <div class="wip-section">
+    <h2>🚧 Work in Progress 🚧</h2>
+    <div class="spinner"></div>
+  </div>
 </body>
 </html>
+
